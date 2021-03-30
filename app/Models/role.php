@@ -10,4 +10,5 @@ class role extends Model
     use HasFactory;
 
     protected $guarded = [];
+
 }
