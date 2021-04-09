@@ -17,10 +17,10 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedInteger('role_id') -> default(2);
-            $table->string('email')->unique();
-            $table->string('phone_number')->unique() -> nullable();
-            $table->string('username')->unique() -> nullable();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('email')-> unique();
+            $table->string('phone_number')-> unique() -> nullable();
+            $table->string('username')-> unique() -> nullable();
+            $table->timestamp('email_verified_at')-> nullable();
             $table->string('password');
             $table->string('photo') -> default('avater.jpg');
             $table->boolean('status') -> default(true);
