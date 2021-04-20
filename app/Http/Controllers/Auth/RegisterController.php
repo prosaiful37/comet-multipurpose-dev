@@ -10,8 +10,8 @@ use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Validator;
 use App\Notifications\AccountConfirmation;
+use Illuminate\Support\Facades\Notification;
 use Illuminate\Foundation\Auth\RegistersUsers;
-
 class RegisterController extends Controller
 {
     /*
@@ -70,8 +70,8 @@ class RegisterController extends Controller
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'phone_number' => $data['phone_number'],
-            'username' => $data['username'],
+            // 'phone_number' => $data['phone_number'],
+            // 'username' => $data['username'],
             'password' => Hash::make($data['password'] )
         ]);
     }
@@ -86,10 +86,12 @@ class RegisterController extends Controller
     protected function registered(Request $request, $user)
     {
 
-        $user -> notify(new AccountConfirmation($user));
+        // $user -> notify(new AccountConfirmation($user));
+
+        Notification::send($user, new AccountConfirmation($user));
 
         Auth::logout();
-        return redirect() -> route('login');
+        return redirect() -> route('admin.login');
 
     }
 

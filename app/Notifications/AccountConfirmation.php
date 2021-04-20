@@ -21,7 +21,7 @@ class AccountConfirmation extends Notification
      */
     public function __construct(User $user)
     {
-        $this->notify_info = $user;
+        $this ->notify_info = $user;
     }
 
     /**
