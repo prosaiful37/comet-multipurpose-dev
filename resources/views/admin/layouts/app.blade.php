@@ -17,6 +17,7 @@
         <link rel="stylesheet" href="{{ asset('admin/assets/css/font-awesome.min.css') }}">
 
 
+
 		<!-- Feathericon CSS -->
         <link rel="stylesheet" href="{{asset('admin/assets/css/feathericon.min.css')}}">
 
@@ -24,6 +25,8 @@
 
 		<!-- Main CSS -->
         <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css') }}">
+
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
 		<!--[if lt IE 9]>
 			<script src="assets/js/html5shiv.min.js"></script>

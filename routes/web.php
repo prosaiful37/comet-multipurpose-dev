@@ -29,3 +29,9 @@ Route::get('/admin/dashboard', [App\Http\Controllers\AdminController::class, 'sh
 Route::POST('/admin/login', [App\Http\Controllers\Auth\LoginController::class, 'login']) -> name('admin.login');
 Route::POST('/admin/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout']) -> name('admin.logout');
 Route::POST('/admin/register', [App\Http\Controllers\Auth\RegisterController::class, 'register']) -> name('admin.register');
+
+
+
+//all post route
+Route::resource('post', 'App\Http\Controllers\PostController');
+Route::resource('Category', 'App\Http\Controllers\CategoryController');
