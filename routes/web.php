@@ -35,3 +35,7 @@ Route::POST('/admin/register', [App\Http\Controllers\Auth\RegisterController::cl
 //all post route
 Route::resource('post', 'App\Http\Controllers\PostController');
 Route::resource('Category', 'App\Http\Controllers\CategoryController');
+Route::get('Category/status-inactive/{id}', 'App\Http\Controllers\CategoryController@statusUpdateInactive');
+Route::get('Category/status-active/{id}', 'App\Http\Controllers\CategoryController@statusUpdateActive');
+
+
