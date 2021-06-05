@@ -15,7 +15,7 @@
 								<ul style="display: none;">
 									<li><a href="{{ route('post.index') }}"> post </a></li>
 									<li><a href="{{route('Category.index')}}"> Category </a></li>
-									<li><a href="forgot-password.html"> Tag </a></li>
+									<li><a href="{{ route('tag.index') }}"> Tag </a></li>
 								</ul>
 							</li>
 
