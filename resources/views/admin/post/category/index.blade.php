@@ -67,7 +67,7 @@
                                         </td>
                                         <td>
                                             {{-- <a class="btn btn-sm btn-info" href="#"><i class="fa fa-eye" aria-hidden="true"></i></a> --}}
-                                            <a class="btn btn-sm btn-warning" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
+                                            <a edit_id="{{ $data -> id }}" class="btn btn-sm btn-warning edit_cat" href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
 
 
                                             <form class="d-inline" action="{{ route('Category.destroy', $data -> id) }}" method="POST">
@@ -111,6 +111,38 @@
               <div class="form-group">
                   <label for="">Name</label>
                   <input name="name" type="text" class="form-control">
+              </div>
+                <div class="form-group">
+                    <input class="btn btn-dark btn-sm" type="submit" value="Add New">
+                </div>
+             </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      {{-- data edit modal --}}
+
+      <div id="edit_category_modal" class="modal fade">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div style="background-color:#1B5A90;" class="modal-body text-white">
+                <h4>Edit Category</h4>
+                <div class="mess"></div>
+                <hr>
+             <form action="{{ route('Category.update', 3 ) }}" method="POST">
+                @csrf
+                @method('PUT')
+              <div class="form-group">
+                  <label for="">Name</label>
+                  <input name="name" type="text" class="form-control">
+                  <input name="edit_id" type="hidden" class="form-control">
               </div>
                 <div class="form-group">
                     <input class="btn btn-dark btn-sm" type="submit" value="Add New">

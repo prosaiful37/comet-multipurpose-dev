@@ -71,6 +71,28 @@
               */
         });
 
+        //category edit
+        $('.edit_cat').click(function(e){
+          e.preventDefault();
+
+          let id = $(this).attr('edit_id');
+
+          $.ajax({
+              url : 'Category/' +id+ '/edit',
+              success : function(data){
+                $('#edit_category_modal form input[name="name"]').val(data.name);
+                $('#edit_category_modal form input[name="edit_id"]').val(data.id);
+                $('#edit_category_modal').modal('show');
+              }
+          });
+
+
+
+
+
+
+        });
+
 
 
 
