@@ -23,6 +23,11 @@
 
 		<link rel="stylesheet" href="{{asset('assets/plugins/morris/morris.css')}}">
 
+
+        <!-- select2 css -->
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+
 		<!-- Main CSS -->
         <link rel="stylesheet" href="{{ asset('admin/assets/css/style.css') }}">
 
@@ -56,7 +61,14 @@
 
         <script src="{{asset('admin/assets/plugins/raphael/raphael.min.js')}}"></script>
         <script src="{{asset('admin/assets/plugins/morris/morris.min.js')}}"></script>
-        <script src="{{asset('admin/assets/js/chart.morris.js')}}"></script>
+        <!-- Custom JS -->
+
+        <!-- ck editor js -->
+
+        <script src="//cdn.ckeditor.com/4.16.1/full/ckeditor.js"></script>
+
+        <!-- select2 js -->
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
 		<!-- Custom JS -->
 		<script src="{{ asset('admin/assets/js/script.js') }}"></script>
