@@ -10,7 +10,7 @@
 
 
         <!-- Page Wrapper -->
-        <div class="page-wrapper">
+        <div style="background: #E2F3FA;" class="page-wrapper">
 
             <div class="content container-fluid">
 
@@ -34,7 +34,7 @@
                             <div class="card-header">
                                 <h4 class="card-title">Add New Post</h4>
                             </div>
-                            <div class="card-body">
+                            <div style="background: #5799AF; color: white;" class="card-body">
                                 <form action="#">
 
 
@@ -89,12 +89,46 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group row">
-                                        <label class="col-lg-3 col-form-label">Features Image</label>
-                                        <div class="col-lg-9">
-                                            <img style="width: 500px;" class="post_img_load" src="" alt=""><br><br>
-                                            <label for="post_image_select"><img style="width :70px; cursor:pointer;" src="{{ URL::to('admin/assets/img/gallery.png') }}" alt=""></label>
-                                            <input style="display: none;" type="file" id="post_image_select">
+                                    <div class="post-image">
+                                        <div class="form-group row ">
+                                            <label class="col-lg-3 col-form-label">Post Image</label>
+                                            <div class="col-lg-9">
+                                                <img style="width: 500px;" class="post_img_load" src="" alt=""><br><br>
+                                                <label for="post_image_select"><img style="width :100px; cursor:pointer;" src="{{ URL::to('admin/assets/img/gallery.png') }}" alt=""></label>
+                                                <input style="display: none;" type="file" id="post_image_select">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-gallery">
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label">Post Gallery image</label>
+                                            <div class="col-lg-9">
+                                                <div class="post-gallery-img"></div>
+                                                <br>
+                                                <br>
+
+                                                <label for="post_image_select_g"><img style="width :100px; cursor:pointer;" src="{{ URL::to('admin/assets/img/gallery.png') }}" alt=""></label>
+                                                <input name="post-gall" style="display: none;" type="file" id="post_image_select_g" multiple>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-video">
+                                        <div class="form-group row ">
+                                            <label class="col-lg-3 col-form-label">Post Video link</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-audio">
+                                        <div class="form-group row">
+                                            <label class="col-lg-3 col-form-label">Post Audio link</label>
+                                            <div class="col-lg-9">
+                                                <input type="text" class="form-control">
+                                            </div>
                                         </div>
                                     </div>
 
